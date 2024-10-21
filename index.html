@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="google" content="notranslate">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>save weight</title>
+     <!-- css links -->
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+     <!-- google fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+     <div class="changeModeDiv"></div>
+     <div class="infoAbout">
+          <h2>Welcome to 'Save weigh'</h2>
+          <p>save weigh is a site created to save your weight progress and see your development.
+               <br>currently it only saves for a week, but I will expand this in the future.
+               <br>that's all i hope it's useful to you
+          </p>
+          <div class="links">
+               <a href="http://t.me/l8l56" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-telegram"></i>
+               </a>
+          </div>
+     </div>
+
+     <div class="container">
+          <header>
+               <div class="pharse">
+                    <h1>save your weight</h1>
+                    <h2>watch your gains</h2>
+               </div>
+               <button class="infoBtn" id="info" onclick="changeMode(event)">
+                    <i class="fa-solid fa-question" id="info"></i>
+               </button>
+          </header>
+          <nav class="warning">
+               <h3>warning message</h3>
+          </nav>
+     </div>
+     <hr class="hr">
+     <div class="container">
+          <div class="displayEx">
+               <div class="displayName">
+                    <p>name</p>
+                    <input type="text" placeholder="Exercise name" id="exNameInput" onkeyup="checkValue(this.id)" required>
+               </div>
+               <div class="displayWeight">
+                    <p>weight</p>
+                    <div class="weightUint">
+                         <input type="number" placeholder="weight" id="exWeightInput" onkeyup="checkValue(this.id)" required>
+                         <select name="units" id="weightUnit">
+                              <option value="kg">kg</option>
+                              <option value="lb">lb</option>
+                         </select>
+                    </div>
+                    
+               </div>
+               <div class="weightBtns">
+                    <button class="displayExBtn" onclick="addExercise()">add exercise</button>
+                    <button class="addWeightBtn" onclick="addWeight()">add weigh</button>
+                    <button class="cancelBtn" onclick="cancel()">cancel</button>
+               </div>
+          </div>
+
+          <section class="mainContent">
+               <div class="btns">
+                    <button class="addEx" onclick="getInputs()">add exercise</button>
+                    <button class="deleteEx" onclick="deleteExercises()">delete</button>
+                    <button class="darkMode" id="darke" onclick="changeMode(event)">
+                         <i class="fa-solid fa-moon" id="darke"></i>
+                    </button>
+               </div>
+
+               <div class="aboutContent">
+                    <h2>there's no exercises yet</h2>
+                    <p>add an exercise to see it</p>
+               </div>
+
+               <div class="exercises">
+                    
+               </div>
+          </section>
+
+          <footer>
+
+          </footer>
+     </div>
+
+     <script src="main.js"></script>
+</body>
+
+</html>

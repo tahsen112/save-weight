@@ -1,0 +1,549 @@
+body {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Poppins", serif;
+}
+
+.container {
+     padding: 0 2em;
+     position: relative;
+}
+
+header {
+     font-size: 0.9em;
+     font-weight: 900;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin: 1.8em 0;
+}
+
+h1 {
+     margin: 0;
+}
+
+.pharse h2 {
+     margin: 2px;
+     font-size: 1.5em;
+     font-weight: 300;
+}
+
+.infoBtn {
+     background: black;
+     color: white;
+     font-size: 1.8em;
+     border-radius: 50%;
+     text-align: center;
+     width: 1.4em;
+     height: 1.4em;
+     padding: 0.2em;
+ }
+
+.hr {
+     border: 1px solid black;
+     margin-top: 1.2em;
+     margin-bottom: 1.5em;
+}
+
+.btns {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin: 1.4em 0;
+}
+
+.aboutContent {
+     text-align: center;
+     position: absolute;
+     inset: 0;
+     margin: 12em 0;
+     font-size: 1.2em;
+     color: #716A6A;
+     display: none;
+}
+
+.aboutContent h2 {
+     font-weight: 700;
+}
+
+.aboutContent p {
+     margin: 0.4em 0;
+     font-weight: 400;
+}
+
+.addEx, .deleteEx {
+     color: white;
+     font-size: 1.1em;
+     font-weight: 500;
+     border-radius: 13px;
+     text-align: center;
+     padding: 8px;
+     text-transform: capitalize;
+}
+
+.addEx{
+     background-color: black;
+}
+
+.deleteEx {
+     display: none;
+     background-color: #b10000;
+     animation: flashing 1.5s ease 0ms infinite;
+     animation-play-state: paused;
+     transition: 0.5s ease;
+}
+
+@keyframes flashing {
+     0%{
+          background-color: #b10000;
+     }
+     50%{
+          background-color: #e70000;
+     }
+     100%{
+          background-color: #b10000;
+     }
+}
+
+.darkMode {
+     font-size: 1.8em;
+     text-align: center;
+     background-color: transparent;
+}
+
+button {
+     border: none;
+}
+
+.exName {
+     font-size: 1.4em;
+     font-weight: 600;
+     margin-bottom: 0.1em;
+}
+
+.lastWeight {
+     font-size: 0.75em;
+     font-weight: 400;
+     color: #504c4c;
+}
+
+.exercises {
+     margin-top: 2.4em;
+}
+
+.exercise {
+     margin: 1.8em 0;
+     height: 62px;
+     overflow: hidden;
+     position: relative;
+     transition: 0.5s ease;
+}
+
+.exHeightAnimate {
+     height: 315px;
+}
+
+.chevron {
+     transform: rotate(180deg);
+}
+
+.selectIcon {
+     display: none;
+}
+
+.chevron, .selectIcon {
+     position: absolute;
+     right: 1px;
+     top: 18px;
+     font-size: 1.5em;
+     transition: 0.5s ease;
+}
+
+.rotateAnimate {
+     transform: rotate(360deg);
+}
+
+.exHr {
+     border: 0.07em solid #AAA7A7;
+     position: absolute;
+     width: 348px;
+     bottom: -8px;
+     transition: 0.5s ease;
+}
+
+input {
+     background: #AAA7A7;
+     border: none;
+     border-radius: 4px;
+     padding: 0.6em;
+}
+
+input::placeholder {
+     color: #717171;
+}
+
+.displayEx {
+     background: #DDDDDD;
+     box-shadow: 0px 0px 40px black;
+     position: absolute;
+     inset: 0;
+     margin: 6.5em auto auto auto;
+     padding: 16px;
+     z-index: 5;
+     width: 200px;
+     height: fit-content;
+     border-radius: 12px;
+     text-align: center;
+     font-size: 1.2em;
+     font-weight: 600;
+     display: none;
+}
+
+.weightBtns {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+}
+
+.displayExBtn {
+     background: black;
+     color: white;
+     font-size: 1em;
+     font-weight: 400;
+     border-radius: 13px;
+     text-align: center;
+     padding: 8px;
+     text-transform: capitalize;
+     margin-top: 1.3em;
+}
+
+.cancelBtn {
+     background: #950101;
+     color: white;
+     font-size: 1em;
+     font-weight: 400;
+     border-radius: 13px;
+     text-align: center;
+     padding: 8px;
+     text-transform: capitalize;
+     margin-top: 1.3em;
+}
+
+.weightUint {
+     display: flex;
+     justify-content: space-between;
+}
+
+input[type="number"] {
+     width: 120px;
+     margin-left: 2%;
+ }
+
+ select {
+     border-radius: 6px;
+     padding: 0 4px;
+     width: 50px;
+     border: 2px solid;
+}
+
+option {
+     color: black;
+}
+
+.details {
+     text-align: center;
+     margin-top: 2%;
+     position: relative;
+}
+
+h3 {
+     margin: 1px 0;
+}
+
+#left {
+     position: absolute;
+     left: 90px;
+     bottom: 45%;
+     transform: rotate(270deg);
+     font-size: 1.2em;
+ }
+
+#right {
+     position: absolute;
+     right: 90px;
+     bottom: 45%;
+     transform: rotate(-270deg);
+     font-size: 1.2em;
+}
+
+.exDate {
+     position: relative;
+}
+
+.exHistory div {
+     background: #716A6A;
+     width: 45px;
+     height: 75px;
+     display: flex;
+     flex-direction: column;
+     justify-content: end;
+     padding-bottom: 3px;
+     border-radius: 4px 4px 0 0;
+     color: white;
+     text-transform: capitalize;
+ }
+
+.exHistory {
+     display: grid;
+     grid-template-columns: repeat(7, 1px);
+     gap: 47px;
+     align-items: end;
+     position: absolute;
+     bottom: -330%;
+     left: 2%;
+}
+
+.exHistory div p {
+     display: flex;
+     justify-content: center;
+     height: 100%;
+     padding-top: 4px;
+     margin: 0;
+}
+
+.addIcon {
+     position: absolute;
+     top: 6px;
+     right: 5px;
+     background: black;
+     padding: 4px;
+     border-radius: 4px;
+     color: white;
+     font-size: 26px;
+}
+
+.addWeightBtn {
+     background: black;
+     color: white;
+     font-size: 1em;
+     font-weight: 400;
+     border-radius: 13px;
+     text-align: center;
+     padding: 8px;
+     text-transform: capitalize;
+     margin-top: 1.3em;
+     display: none;
+}
+
+.warning {
+     padding: 1em;
+     position: absolute;
+     inset: 0;
+     width: fit-content;
+     margin: -30% auto auto auto;
+     background: rgb(218, 218, 218);
+     border-radius: 25px;
+     box-shadow: 0 0 16px 0 black;
+     height: fit-content;
+     color: #cc0000;
+     max-width: 20em;
+     text-align: center;
+     transition: 0.5s ease;
+}
+
+.warningAnimate {
+     margin: -1% auto auto auto;
+}
+
+.selected {
+     display: none;
+}
+
+.changeModeDiv {
+     position: absolute;
+     background: red;
+     z-index: 150;
+     width: 20px;
+     height: 20px;
+     border-radius: 50%;
+     opacity: 0;
+     animation: none 2s ease 0ms;
+}
+
+@keyframes cover {
+     0%{
+          opacity: 1;
+          width: 20px;
+          height: 20px;
+          opacity: 1;
+     }
+     50%{
+          opacity: 1;
+          transform: scale(100);
+     }
+     100%{
+          opacity: 0;
+          transform: scale(100);
+     }
+}
+
+.infoAbout {
+     width: 100dvw;
+     height: 100dvh;
+     display: none;
+     position: absolute;
+     top: 0;
+     z-index: 100;
+     background: white;
+ }
+
+.infoAbout h2 {
+     margin: 4em 0 0 1em;
+     font-weight: 700;
+}
+
+.infoAbout p {
+     margin: 0.5em 1em 0 2em;
+     font-size: 1.4em;
+}
+
+.links {
+     margin: 2em 0 0 1.5em;
+     font-size: 2em;
+}
+
+a {
+     text-decoration: none;
+     color: inherit;
+}
+
+@media (max-width: 375px) {
+     body {
+          font-size: 15px;
+     }
+
+     .exercise {
+          height: 54px;
+     }
+
+     .exHeightAnimate {
+          height: 315px;
+     }
+
+     .details {
+          margin-top: 5%;
+      }
+
+     .exHistory {
+          gap: 2.87em;
+          bottom: -197px;
+          left: 0;
+     }
+
+     .exHistory div {
+          width: 9.8vw;
+          padding: 2px;
+     }
+}
+
+@media (max-width: 350px) {
+     body {
+          font-size: 14px;
+     }
+
+     .details {
+          margin-top: 5%;
+      }
+
+     .exHistory {
+          gap: 2.8em;
+          bottom: -201px;
+          left: 2%;
+     }
+
+     .exHistory div {
+          width: 9vw;
+          padding: 2px;
+     }
+
+     .warning {
+          margin: -34% auto auto auto;
+     }
+
+     .warningAnimate {
+          margin: -1% auto auto auto;
+     }
+
+}
+
+@media (max-width: 325px) {
+     body {
+          font-size: 13px;
+     }
+
+     .exercise {
+          height: 49px;
+     }
+
+     .exHeightAnimate {
+          height: 315px;
+     }
+
+     .details {
+          margin-top: 6%;
+      }
+
+     .exHistory {
+          gap: 2.7em;
+          bottom: -194px;
+          left: 3%;
+     }
+
+     .exHistory div {
+          width: 9vw;
+          padding: 2px;
+     }
+
+}
+
+@media (min-width: 760px) {
+     body {
+          font-size: 20px;
+     }
+
+     .exercise {
+          height: 70px;
+     }
+
+     .exHeightAnimate {
+          height: 390px;
+     }
+
+     .exHr {
+          width: 100vw;
+      }
+
+      .exDate {
+          margin-top: 1em;
+     }
+
+      .exHistory {
+          gap: 94px;
+          left: 7%;
+          bottom: -260px;
+      }
+
+     .exHistory div {
+          width: 11vw;
+     }
+
+     .deleteEx {
+          margin-left: 25%;
+      }
+
+      .displayExBtn {
+          font-size: small;
+      }
+
+}
